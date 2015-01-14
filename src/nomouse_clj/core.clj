@@ -8,6 +8,7 @@
            :accept :json
            :socket-timeout 5000
            :conn-timeout 5000
+           :headers {"User-Agent" "Lianxi/1.0(token;Android 2.1;HTC Desire S Build/GRI40;LT;2G)"}
            :body (generate-string req)}))
 
 (def url-map {"loc" "http://localhost:8080/nomouse-spring"
@@ -23,5 +24,5 @@
 
 (defn -main
   [& args]
-  (println (api "loc" "/token" http/get {:id 123}))
+  (println (api "loc" "/token1" http/get {:id 123}))
   )
